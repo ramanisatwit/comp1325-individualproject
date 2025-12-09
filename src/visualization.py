@@ -24,7 +24,8 @@ plt.show()
 
 # Question 3: Correlation between Engineered Features and Average Graduation Rates
 features = ['avg_graduation_rate', 'graduation_rate_improvement', 'selectivity_score', 'cohort_size']
-plt.figure(figsize=(10, 8))
-sns.heatmap(df[features].corr(), annot=True, cmap='coolwarm', fmt=".2f")
+plt.figure(figsize=(8, 6))
+sns.heatmap(df[features].corr(), annot=True, cmap='coolwarm', fmt=".2f", annot_kws={"fontsize": 8})
 plt.title("Correlation between Engineered Features and Average Graduation Rates")
+plt.tight_layout()
 plt.show()
